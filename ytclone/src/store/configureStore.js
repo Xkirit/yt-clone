@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import youtubeReducer from "../features/youtube/YoutubeSlice";
-export const store = configureStore({
+import YoutubeReducer from "../features/youtube/YoutubeSlice";
+export const Store = configureStore({
   reducer: {
-    youtubeApp: youtubeReducer,
+    YoutubeApp: YoutubeReducer,
   },
 })
