@@ -35,12 +35,11 @@ export const ParseData = async (items) => {
     } = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails,statistics&id=${videoIdsString}&key=${API_KEY}`);
 
     console.log('videosData:', videosData); // Debugging: Check the video data structure
-
+    
     const parseData = items.map((item, index) => {
       const { image: channelImage } = parsedChannelsData.find(data => data.id === item.snippet.channelId) || {};
-
+      // console.log(channelImage);
       const videoDuration = videosData[index]?.contentDetails?.duration;
-      console.log('duration:', videoDuration); // Debugging: Check the duration
 
       return {
         videoId: item.id.videoId, // Corrected
@@ -58,7 +57,7 @@ export const ParseData = async (items) => {
         },
       };
     });
-
+    console.log('parseData:', parseData); // Debugging: Check the final parsed data
     return parseData;
 
   } catch (err) {

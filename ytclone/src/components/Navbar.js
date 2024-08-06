@@ -7,7 +7,7 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
 function Navbar() {
   return (
-    <div className='flex justify-between px-3 h-8 margin- items-center bg-[#212121] opacity-95 sticky'>
+    <div className='flex justify-between px-3 h-8 margin-1 items-center py-5 bg-zinc-900 opacity-95 sticky'>
       <div className='flex gap-8 items-center text-2x1 text-white'>
         <div>
           <RxHamburgerMenu />

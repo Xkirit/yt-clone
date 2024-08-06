@@ -37,7 +37,7 @@ function Sidebar() {
 
   ]
   return (
-    <div className='w-2/12 bg-[#212121] py-2 pr-4 overflow-auto pb-8 h-screen'>
+    <div className='w-2/12 bg-zinc-900 py-3 pr-4 overflow-auto pb-8 h-screen'>
       <ul className='flex flex-col border-b border-gray-700'>
         {mainLinks.map(
           ({icon,name}) =>{
